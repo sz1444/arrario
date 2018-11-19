@@ -11,6 +11,7 @@ $(document).on('ready', function () {
         responsive: [{
                 breakpoint: 600,
                 settings: {
+                    arrows: false,
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
