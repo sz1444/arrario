@@ -112,9 +112,9 @@ function navColor() {
         document.querySelector('.logo a img').src = "img/logowhite.png";
     }
 }
-var phone = document.querySelector('.number');
-
-phone.addEventListener('keypress', noNumbers);
+var phone = document.querySelectorAll('.number');
+for(var i =0; i<phone.length; i++){
+phone[i].addEventListener('keypress', noNumbers);}
 
 function noNumbers(e) {
     if ((e.which < 48 || e.which > 57)) {
