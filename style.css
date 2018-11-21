@@ -1,21 +1,38 @@
 * {
     padding: 0;
     margin: 0 auto;
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 body {
     overflow-x: hidden;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+.header-icon {
+    font-family: 'Raleway', sans-serif;
 
 }
-h1,h2,h3, .header-icon{
-        font-family: 'Raleway', sans-serif;
 
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
 }
-h1{
+
+
+
+h1 {
     font-size: 1.5rem;
-    color:#ffffff;
+    color: #ffffff;
     margin-top: 0px;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -24,11 +41,11 @@ h1{
 }
 
 
-h1::after{
+h1::after {
     content: "";
     display: inline-block;
     width: 50px;
-    height: 1px; 
+    height: 1px;
     background-color: #ffffff;
     margin: auto;
     margin-bottom: .5rem;
@@ -37,11 +54,11 @@ h1::after{
 
 
 
-h1::before{
+h1::before {
     content: "";
     display: inline-block;
     width: 50px;
-    height: 1px; 
+    height: 1px;
     background-color: #fff;
     margin: auto;
     margin-bottom: .5rem;
@@ -52,7 +69,7 @@ h1::before{
 .hidden {
     opacity: 0;
     visibility: hidden;
-    
+
 }
 
 .load {
@@ -66,10 +83,35 @@ h1::before{
 
 }
 
- 
+
+.facebook{
+    position: fixed;
+    top:20%;
+    left:-400px;
+    transition-duration: .3s;
+}
+
+.facebook::after{
+   content: "";
+    background-color: #3b5998;
+    position: absolute;
+    background-image: url(facbook.svg);
+    background-size: 38px 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+  height: 38px;
+    padding: 10px;
+  width: 38px;
+    
+}
+
+.facebook:hover{
+    left: 0;
+}
+
 
 .fancy-spinner {
-       position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     margin-left: -2.5rem;
@@ -77,53 +119,58 @@ h1::before{
     z-index: 5;
     display: flex;
     justify-content: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
 }
+
 .fancy-spinner div {
-  position: absolute;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
 }
+
 .fancy-spinner div.ring {
-  border-width: 0.5rem;
-  border-style: solid;
-  border-color: transparent;
-  -webkit-animation: 2s fancy infinite alternate;
-          animation: 2s fancy infinite alternate;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-animation: 2s fancy infinite alternate;
+    animation: 2s fancy infinite alternate;
 }
+
 .fancy-spinner div.ring:nth-child(1) {
-  border-left-color: #007cb8;
-  border-right-color: #007cb8;
+    border-left-color: #007cb8;
+    border-right-color: #007cb8;
 }
+
 .fancy-spinner div.ring:nth-child(2) {
-  border-top-color: #007cb8;
-  border-bottom-color: #007cb8;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+    border-top-color: #007cb8;
+    border-bottom-color: #007cb8;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
+
 .fancy-spinner div.dot {
-  width: 1rem;
-  height: 1rem;
-  background: #007cb8;
+    width: 1rem;
+    height: 1rem;
+    background: #007cb8;
 }
 
 @-webkit-keyframes fancy {
-  to {
-    -webkit-transform: rotate(360deg) scale(0.5);
-            transform: rotate(360deg) scale(0.5);
-  }
+    to {
+        -webkit-transform: rotate(360deg) scale(0.5);
+        transform: rotate(360deg) scale(0.5);
+    }
 }
 
 @keyframes fancy {
-  to {
-    -webkit-transform: rotate(360deg) scale(0.5);
-            transform: rotate(360deg) scale(0.5);
-  }
+    to {
+        -webkit-transform: rotate(360deg) scale(0.5);
+        transform: rotate(360deg) scale(0.5);
+    }
 }
 
 span {
@@ -195,13 +242,13 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 3;
-    top:0;
+    top: 0;
     border-bottom: 1px solid #444;
     transition-duration: .6s;
     min-height: 80px;
 }
 
-.logo-mobile{
+.logo-mobile {
     display: none;
 }
 
@@ -238,50 +285,53 @@ nav a:hover {
 }
 
 
-.nav a{
-    color:#666;
+.nav a {
+    color: #666;
 }
 
 
 
 .menu-toggle {
     display: none;
-  width: 40px;
-  height: 30px;
-  position: absolute;
+    width: 40px;
+    height: 30px;
+    position: absolute;
     z-index: 5;
-  top: 20px;
-  right: 25px;
-  cursor: pointer;
+    top: 20px;
+    right: 25px;
+    cursor: pointer;
 }
+
 .menu-toggle.on .one {
-  -moz-transform: rotate(45deg) translate(7px, 7px);
-  -ms-transform: rotate(45deg) translate(7px, 7px);
-  -webkit-transform: rotate(45deg) translate(7px, 7px);
-  transform: rotate(45deg) translate(7px, 7px);
+    -moz-transform: rotate(45deg) translate(7px, 7px);
+    -ms-transform: rotate(45deg) translate(7px, 7px);
+    -webkit-transform: rotate(45deg) translate(7px, 7px);
+    transform: rotate(45deg) translate(7px, 7px);
 }
+
 .menu-toggle.on .two {
-  opacity: 0;
+    opacity: 0;
 }
+
 .menu-toggle.on .three {
-  -moz-transform: rotate(-45deg) translate(8px, -10px);
-  -ms-transform: rotate(-45deg) translate(8px, -10px);
-  -webkit-transform: rotate(-45deg) translate(8px, -10px);
-  transform: rotate(-45deg) translate(8px, -10px);
+    -moz-transform: rotate(-45deg) translate(8px, -10px);
+    -ms-transform: rotate(-45deg) translate(8px, -10px);
+    -webkit-transform: rotate(-45deg) translate(8px, -10px);
+    transform: rotate(-45deg) translate(8px, -10px);
 }
 
 .one,
 .two,
 .three {
-  width: 100%;
-  height: 5px;
-  background:#777;
-  margin: 6px auto;
-  backface-visibility: hidden;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+    width: 100%;
+    height: 5px;
+    background: #777;
+    margin: 6px auto;
+    backface-visibility: hidden;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 
@@ -357,10 +407,26 @@ nav .logo img {
     display: flex;
 }
 
+.admission .icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 0.4px;
+    stroke: #fff;
+    fill: #4d4d4d;
+    transition-duration: .3s;
+}
+
 .admission li {
     display: inline-block;
     padding: 20px;
-    text-align:center;
+    text-align: center;
+    width: 25%;
+}
+
+.admission li:hover .icon {
+    fill: #026595;
+    stroke-width: 0px;
 }
 
 .admission span {
@@ -566,17 +632,29 @@ nav .logo img {
 
 .offer li {
     padding: 0px;
-    height: 320px;
+    min-height: 320px;
+    width: 25%;
+    overflow: hidden;
     position: relative;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
-.offer img {
-    width: 100%;
-    height: 320px;
-    -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
 
+
+.offer li:nth-child(1){
+    background-image: url(img/blog.jpg);
+
+}
+.offer li:nth-child(2){
+    background-image: url(img/shop.jpg);
+}
+.offer li:nth-child(3){
+    background-image: url(img/business.jpg);
+}
+.offer li:nth-child(4){
+    background-image: url(img/business%20card.jpg);
 }
 
 .offer .box {
@@ -584,10 +662,11 @@ nav .logo img {
     padding: 30px;
     position: absolute;
     width: 100%;
-    height: 320px;
+    height: 100%;
     overflow: hidden;
     top: 0;
-    background-color: rgba(90, 90, 90, 0.42);
+    background-color: rgba(65, 65, 65, 0.61);
+    transition-duration: .3s;
 }
 
 .offer .box p {
@@ -601,8 +680,12 @@ nav .logo img {
     transition-duration: .3s;
 }
 
-.offer .box:hover p {
+.offer li:hover p {
     bottom: 0;
+}
+
+.offer li:hover .box{
+     background-color: rgba(65, 65, 65, 0.21);
 }
 
 .offer li:hover img {
@@ -687,7 +770,7 @@ button.slick-prev:hover {
     padding: 20px;
     background-color: #505050;
     background-image: url(img/contakt.jpg);
-    background-size: 100%;
+  background-position: center;
     text-align: center;
     padding: 70px;
     padding-bottom: 110px;
@@ -712,13 +795,14 @@ button.slick-prev:hover {
     font-weight: 400;
 
 }
-input.number{
-    border-radius: 25px 0 0 25px ;
+
+input.number {
+    border-radius: 25px 0 0 25px;
 }
 
-input.number::placeholder{
-    color:#818181;
-font-weight: 400;
+input.number::placeholder {
+    color: #818181;
+    font-weight: 400;
 }
 
 button.send-number {
@@ -739,13 +823,17 @@ button.send-number:hover {
 .footer {
     background-color: rgba(18, 18, 18, 0.42);
     padding: 10px;
+    padding-bottom: 30px;
     margin-top: -50px;
     position: absolute;
     z-index: 3;
     width: 100%;
     left: 0;
-
+    bottom: 0;
+    min-height: 60px;
 }
+
+
 
 .footer ul {
     display: flex;
@@ -755,10 +843,22 @@ button.send-number:hover {
 .footer li {
     display: inline-block;
     position: relative;
-    height: 30px;
-    line-height: 30px;
+    height: 0px;
+    line-height: 2.4rem;
     color: #fff;
     padding-left: 40px;
+}
+
+footer .icon {
+    position: absolute;
+    left: 0;
+    bottom: -34px;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    stroke-width: 0;
+    stroke: rgb(255, 255, 255);
+    fill: rgba(255, 255, 255, 0.75);
 }
 
 .footer img {
@@ -769,20 +869,69 @@ button.send-number:hover {
 }
 
 .call {
-    position: fixed;
-    background-color: #007cb8;
-    width: 60px;
-    height: 60px;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
     z-index: 4;
-    padding: 15px;
+    position: fixed;
+    stroke: #007cb8;
+    fill: #fff;
     bottom: 20px;
     right: 20px;
+    background-color: #007cb8;
+    padding: 10px;
     border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 5px 5px 1px #025f8d;
+    transition-duration: .2s;
 }
 
-.phone img {
+
+.call .icon {
+    display: inline-block;
+    width: 4rem;
+    transform: rotate(-60deg);
+    height: 4rem;
+    z-index: 4;
+    stroke: #007cb8;
+    fill: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
     cursor: pointer;
+    transition-duration: .2s;
 }
+
+.call:hover .icon {
+    -webkit-animation: call .2s infinite;
+    -moz-animation: call .2s infinite;
+    -ms-animation: call .2s infinite;
+    animation: call .2s infinite;
+}
+
+.call:active {
+    box-shadow: 0 0 0;
+    bottom: 15px;
+    right: 15px;
+}
+
+@keyframes call {
+
+    0% {
+        transform: rotate(-50deg);
+    }
+
+    50% {
+        transform: rotate(-60deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
 
 .alert {
     position: fixed;
@@ -804,7 +953,7 @@ button.send-number:hover {
     background-image: url(img/phone.png);
     background-size: 25%;
     background-repeat: no-repeat;
-    background-position:0 30px;
+    background-position: 0 30px;
     min-height: 225px;
     max-width: 700px;
     margin-left: -350px;
@@ -843,14 +992,13 @@ button.send-number:hover {
     .offer ul,
     .admission ul {
         display: block;
-        ;
         padding-top: 20px;
     }
 
     .offer li,
     .admission li {
         display: inline-block;
-        max-width: 50%;
+        width: 50%;
         margin: -4px -2px;
 
     }
@@ -882,7 +1030,7 @@ button.send-number:hover {
         background-image: none;
     }
 
-    
+
     .mobile-white {
         color: #fff;
     }
@@ -899,60 +1047,69 @@ button.send-number:hover {
 }
 
 @media (max-width :830px) {
-    body{
+    body {
         padding-top: 80px;
     }
-    
-    .logo{
+
+    .logo {
         display: none;
     }
+
     .menu-toggle {
         display: block;
     }
-    .hidden-menu{
-    display: none;
-}
-    
-    nav{
+
+    .hidden-menu {
+        display: none;
+    }
+
+    nav {
         right: 0;
         z-index: 4;
-        
-    }.logo-mobile{
+
+    }
+
+    .logo-mobile {
         display: block;
     }
-    
-    .logo-mobile img{
+
+    .logo-mobile img {
         display: block;
         width: 120px;
-        top:20px;
+        top: 20px;
         position: absolute;
-        
+
     }
-    nav, .nav {
-    background-color: #fff;
-        
+
+    nav,
+    .nav {
+        background-color: #fff;
+
     }
-    
-    nav a{
-        color:#666;
+
+    nav a {
+        color: #666;
     }
-    nav ul{
-       border-top:1px solid #ddd;
+
+    nav ul {
+        border-top: 1px solid #ddd;
         margin-top: 35px;
-    
-     
+
+
     }
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 0;
         padding: 0;
         text-align: center;
-        
+
     }
-    nav a{
-       font-size: 2rem;
-      padding: 20px;
-        
+
+    nav a {
+        font-size: 2rem;
+        padding: 20px;
+
     }
 }
 
@@ -979,7 +1136,7 @@ button.send-number:hover {
 
     .offer li,
     .admission li {
-        max-width: 100%;
+        width: 100%;
     }
 
     .offer .box p {
@@ -1057,7 +1214,7 @@ button.send-number:hover {
 }
 
 
-button.slick-next{
+button.slick-next {
     display: none;
 }
 
