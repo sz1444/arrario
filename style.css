@@ -870,8 +870,8 @@ footer .icon {
 
 .call {
     display: inline-block;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     z-index: 4;
     position: fixed;
     stroke: #007cb8;
@@ -882,16 +882,16 @@ footer .icon {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 5px 5px 1px #025f8d;
+    box-shadow: 3px 3px 1px #025f8d;
     transition-duration: .2s;
 }
 
 
 .call .icon {
     display: inline-block;
-    width: 4rem;
+    width: 3rem;
     transform: rotate(-60deg);
-    height: 4rem;
+    height: 3rem;
     z-index: 4;
     stroke: #007cb8;
     fill: #fff;
@@ -913,8 +913,8 @@ footer .icon {
 
 .call:active {
     box-shadow: 0 0 0;
-    bottom: 15px;
-    right: 15px;
+    bottom: 17px;
+    right: 17px;
 }
 
 @keyframes call {
