@@ -1047,6 +1047,9 @@ footer .icon {
 }
 
 @media (max-width :830px) {
+    .facebook{
+        display: none;
+    }
     body {
         padding-top: 80px;
     }
