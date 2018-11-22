@@ -870,8 +870,8 @@ footer .icon {
 
 .call {
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     z-index: 4;
     position: fixed;
     stroke: #007cb8;
@@ -889,9 +889,9 @@ footer .icon {
 
 .call .icon {
     display: inline-block;
-    width: 3rem;
+    width: 3.5rem;
     transform: rotate(-60deg);
-    height: 3rem;
+    height: 3.5rem;
     z-index: 4;
     stroke: #007cb8;
     fill: #fff;
